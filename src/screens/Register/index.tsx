@@ -154,7 +154,8 @@ export function Register(){
                 isActive={transactionType === "negative"}
               />
             </TransactionsTypes>
-            <CategorySelectButton 
+            <CategorySelectButton
+              testID="modal-category-button"
               title={category.name}
               onPress={handleOpenSelectCategoryModal}
             />
@@ -164,7 +165,7 @@ export function Register(){
             onPress={handleSubmit(handleRegister)}
           />
         </Form>
-        <Modal visible={categoryModalIsOpen}>
+        <Modal testID="modal-category" visible={categoryModalIsOpen}>
           <CategorySelect 
             category={category}
             setCategory={setCategory}
